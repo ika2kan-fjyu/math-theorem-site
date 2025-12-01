@@ -12,13 +12,19 @@
           {{ article.title }}
         </NuxtLink>
 
+        <!-- ここを修正 -->
         <div class="text-sm text-gray-600 mt-1 flex flex-wrap gap-2">
-          <span v-if="article.level" class="px-2 py-0.5 bg-gray-100 rounded-full">
-            {{ article.level }}
+          <!-- level は meta.level から読む -->
+          <span
+            v-if="article.meta?.level"
+            class="px-2 py-0.5 bg-gray-100 rounded-full"
+          >
+            {{ article.meta.level }}
           </span>
 
+          <!-- field は配列を想定（なければ空配列） -->
           <span
-            v-for="f in (article.field || [])"
+            v-for="f in (article.meta?.field || [])"
             :key="f"
             class="px-2 py-0.5 bg-gray-100 rounded-full"
           >
