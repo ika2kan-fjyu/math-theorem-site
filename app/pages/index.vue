@@ -1,18 +1,5 @@
 <template>
   <main class="min-h-screen bg-gray-50">
-    <header class="bg-white border-b">
-      <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-        <NuxtLink to="/" class="font-bold text-lg">
-          分布と統計の学習サイト（仮）
-        </NuxtLink>
-
-        <nav class="space-x-4 text-sm">
-          <NuxtLink to="/basics" class="hover:underline">基礎</NuxtLink>
-          <NuxtLink to="/distributions" class="hover:underline">分布一覧</NuxtLink>
-        </nav>
-      </div>
-    </header>
-
     <section class="max-w-4xl mx-auto px-4 py-8 space-y-4">
       <h1 class="text-3xl font-bold">
         確率分布を中心に学ぶ、統計の学習ノート
